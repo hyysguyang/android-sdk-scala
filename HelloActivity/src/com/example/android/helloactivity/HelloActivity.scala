@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.helloactivity
+package com.example.android.helloactivity
 
 import android.app.Activity
 import android.os.Bundle
@@ -25,9 +25,7 @@ class HelloActivity extends Activity {
   /** Called when the activity is first created. */
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
-    val tv = new TextView(this)
-    tv setText "Scala on Android"
-    setContentView(tv)
+    setContentView(R.layout.main)
   }
 
 }

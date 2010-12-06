@@ -14,20 +14,35 @@
  * limitations under the License.
  */
 
-package com.example.android.snake;
+package com.example.android.notepad.tests
 
-import android.test.ActivityInstrumentationTestCase;
+import android.test.ActivityInstrumentationTestCase2
+import android.widget.TextView
+import junit.framework.Assert._
 
-import com.example.android.snake.Snake;
+import com.example.android.notepad
+import com.example.android.notepad.NotesList
 
 /**
  * Make sure that the main launcher activity opens up properly, which will be
  * verified by {@link ActivityTestCase#testActivityTestCaseSetUpProperly}.
  */
-public class SnakeTest extends ActivityInstrumentationTestCase<Snake> {
-  
-  public SnakeTest() {
-      super("com.example.android.snake", Snake.class);
+class NotePadTest extends ActivityInstrumentationTestCase2[NotesList]("com.example.android.notepad", classOf[NotesList]) {
+
+  private var mActivity: NotesList = _ // the activity under test
+
+  @throws(classOf[Exception])
+  override protected def setUp() {
+    super.setUp()
+    mActivity = this.getActivity
   }
-  
+
+  def testPreconditions() {
+    // to be completed
+  }
+
+  def testText() {
+    // to be completed
+  }
+
 }
