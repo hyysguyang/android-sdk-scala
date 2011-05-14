@@ -95,7 +95,7 @@ for dir in `find $AVD_HOME -type d -name "*.avd"` "" ; do
   cp $SOURCE $RAMDISK_DIR/ramdisk.img
   ( \
     cd $RAMDISK_DIR/ && gunzip -S.img ramdisk.img && \
-    cpio --quiet -i -F ramdisk && cpio --quiet -t -F ramdisk > ramdisk_list && \
+    cpio --quiet -i -F ramdisk && cpio --quiet -i -t -F ramdisk > ramdisk_list && \
     mkdir bin && cp $TMP_DIR/busybox bin/ && \
     chmod 755 bin/busybox && \
     mkdir -p data/framework usr/local/etc && \
