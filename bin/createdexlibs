@@ -38,7 +38,7 @@ fi
 
 # pick up the more recent version of the dx tool
 DX=""
-DX_LIST=`find $ANDROID_SDK_ROOT/platforms/ -name dx | sort -r`
+DX_LIST=`find $ANDROID_SDK_ROOT/ -name dx -type f -executable | sort -r`
 for i in $DX_LIST "" ; do
     [ -z "$DX_LIST" ] && continue
     if [ -x "$i" ] ; then
